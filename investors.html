@@ -1430,25 +1430,10 @@ body {
     });
   });
 
-  // демонстрационная обработка формы инвестора
-  const investForm = document.getElementById("investForm");
-  investForm.addEventListener("submit", (e) => {
-    e.preventDefault();
-    const payload = {
-      name: document.getElementById("invName").value,
-      company: document.getElementById("invCompany").value,
-      role: document.getElementById("invRole").value,
-      phone: document.getElementById("invPhone").value,
-      focus: document.getElementById("invFocus").value,
-      comment: document.getElementById("invComment").value
-    };
-    console.log("Новый инвестзапрос:", payload);
-    alert("Запрос отправлен (сейчас — лог в консоль браузера).");
-    e.target.reset();
-  });
 </script>
 
 </body>
 </html>
+
 
 
