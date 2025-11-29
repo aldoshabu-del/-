@@ -256,26 +256,44 @@
         </div>
       </div>
 
-      <form id="reservationForm">
-        <input type="hidden" id="plotIdInput" />
+      <!-- Форма заявки на участок -->
+      <form
+        id="reservationForm"
+        action="https://formsubmit.co/s1410@mail.RU"
+        method="POST">
+
+        <!-- заполняется автоматически из выбранного участка -->
+        <input type="hidden" id="plotIdInput"     name="plot_id">
+        <input type="hidden" id="plotNameInput"   name="plot_name">
+        <input type="hidden" id="plotAreaInput"   name="plot_area">
+        <input type="hidden" id="plotPriceInput"  name="plot_price">
+        <input type="hidden" id="plotStatusInput" name="plot_status">
 
         <div class="form-group">
           <label for="clientName">Имя *</label>
-          <input type="text" id="clientName" required />
+          <input type="text" id="clientName" name="name" required />
         </div>
 
         <div class="form-group">
           <label for="clientPhone">Телефон *</label>
-          <input type="tel" id="clientPhone" required />
+          <input type="tel" id="clientPhone" name="phone" required />
         </div>
 
         <div class="form-group">
           <label for="clientComment">Комментарий</label>
-          <textarea id="clientComment"></textarea>
+          <textarea id="clientComment" name="comment"
+            placeholder="Удобное время для звонка, пожелания по дому…"></textarea>
         </div>
 
-        <button type="submit" class="btn">Зарезервировать</button>
-        <div class="note">Сейчас заявка выводится в консоль браузера.</div>
+        <!-- служебные поля formsubmit -->
+        <input type="hidden" name="_subject" value="Заявка на участок с карты посёлка Алхасты">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_next" value="https://aldoshabu-del.github.io/-/index-map.html">
+
+        <button type="submit" class="btn">Отправить заявку на участок</button>
+        <div class="note">
+          Заявка уйдёт менеджеру посёлка на электронную почту. Наш специалист свяжется с вами для уточнения деталей.
+        </div>
       </form>
     </aside>
   </div>
@@ -439,7 +457,6 @@
       plot.polygon.options.set(highlight);
 
       updateSidebar();
-
       highlightTableRow(plot.id);
 
       if (center) {
@@ -461,28 +478,29 @@
         <div class="status-pill ${statusClass(selectedPlot.status)}">${selectedPlot.status}</div>
       `;
 
-      document.getElementById("plotIdInput").value = selectedPlot.id;
+      // заполняем скрытые поля формы заявки
+      const idInput     = document.getElementById("plotIdInput");
+      const nameInput   = document.getElementById("plotNameInput");
+      const areaInput   = document.getElementById("plotAreaInput");
+      const priceInput  = document.getElementById("plotPriceInput");
+      const statusInput = document.getElementById("plotStatusInput");
+
+      if (idInput)     idInput.value     = selectedPlot.id ?? "";
+      if (nameInput)   nameInput.value   = selectedPlot.name ?? "";
+      if (areaInput)   areaInput.value   = selectedPlot.area ?? "";
+      if (priceInput)  priceInput.value  = selectedPlot.price ?? "";
+      if (statusInput) statusInput.value = selectedPlot.status ?? "";
     }
 
     function setupForm() {
       const form = document.getElementById("reservationForm");
 
       form.addEventListener("submit", e => {
-        e.preventDefault();
+        // лёгкая защита: не даём отправить форму без выбранного участка
         if (!selectedPlot) {
-          alert("Выберите участок.");
-          return;
+          e.preventDefault();
+          alert("Пожалуйста, выберите участок на карте или в таблице.");
         }
-
-        console.log("Заявка:", {
-          plotId: selectedPlot.id,
-          name: document.getElementById("clientName").value,
-          phone: document.getElementById("clientPhone").value,
-          comment: document.getElementById("clientComment").value
-        });
-
-        alert("Заявка отправлена (сейчас просто лог в консоль).");
-        form.reset();
       });
     }
 
