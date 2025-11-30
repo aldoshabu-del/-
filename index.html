@@ -552,22 +552,18 @@
 
     /* ---------- Документы / правила ---------- */
 
-    .docs-grid {
+        .docs-grid {
       display: grid;
       grid-template-columns: 1.2fr 1fr;
       gap: 16px;
     }
 
-    <div class="docs-list">
-  <div class="doc-item">
-    <div>
-      <div class="doc-name">Устав ТСЖ «Алхасты»</div>
-      <div class="doc-tag">структура управления, взносы, права и обязанности собственников</div>
-    </div>
-    <a class="pill" href="ustav-tszh-alhasty.pdf" target="_blank" rel="noopener">
-      Скачать PDF
-    </a>
-  </div>
+    .docs-list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      font-size: 13px;
+    }
 
   <div class="doc-item">
     <div>
@@ -1178,46 +1174,72 @@
         </div>
 
         <div class="docs-grid">
-          <div>
-            <div class="docs-list">
-              <div class="doc-item">
-                <div>
-                  <div class="doc-name">Устав ТСЖ «Алхасты»</div>
-                  <div class="doc-tag">структура управления, права и обязанности собственников</div>
-                </div>
-                <span class="pill">Внутренний документ</span>
-              </div>
-
-              <div class="doc-item">
-                <div>
-                  <div class="doc-name">Правила застройки и проживания</div>
-                  <div class="doc-tag">архитектурный стиль, шум, парковка, животные, экология</div>
-                </div>
-                <span class="pill pill-green">Единый дизайн-код</span>
-              </div>
-
-              <div class="doc-item">
-                <div>
-                  <div class="doc-name">Правила пользования общими зонами</div>
-                  <div class="doc-tag">парк, детские и спортивные площадки, зоны пикников</div>
-                </div>
-                <span class="pill">Комфорт и безопасность</span>
-              </div>
-
-              <div class="doc-item">
-                <div>
-                  <div class="doc-name">Справка об общей концепции проекта</div>
-                  <div class="doc-tag">описание территории, этапы реализации, господдержка</div>
-                </div>
-                <span class="pill pill-gold">Для инвесторов</span>
-              </div>
-            </div>
-
-            <div class="docs-note">
-              Полные тексты документов предоставляются заинтересованным покупателям
-              и инвесторам по запросу.
-            </div>
+  <div>
+    <div class="docs-list">
+      <div class="doc-item">
+        <div>
+          <div class="doc-name">Устав ТСЖ «Алхасты»</div>
+          <div class="doc-tag">
+            структура управления, взносы, права и обязанности собственников
           </div>
+        </div>
+        <a class="pill"
+           href="ustav-tszh-alhasty.pdf"
+           target="_blank"
+           rel="noopener">
+          Скачать PDF
+        </a>
+      </div>
+
+      <div class="doc-item">
+        <div>
+          <div class="doc-name">Правила застройки и проживания</div>
+          <div class="doc-tag">
+            архитектурный стиль, заборы, парковка, шум, животные, экология
+          </div>
+        </div>
+        <a class="pill pill-green"
+           href="pravila-zastroiki-i-prozhivaniya-alhasty.pdf"
+           target="_blank"
+           rel="noopener">
+          Скачать PDF
+        </a>
+      </div>
+
+      <div class="doc-item">
+        <div>
+          <div class="doc-name">Инвест-портал проекта «Алхасты»</div>
+          <div class="doc-tag">
+            многопрофильная зона, финансовая модель, формат участия инвесторов
+          </div>
+        </div>
+        <a class="pill pill-gold" href="investors.html">
+          Перейти на инвест-портал
+        </a>
+      </div>
+    </div>
+
+    <div class="docs-note">
+      Полные версии документов доступны для скачивания.  
+      Для заинтересованных покупателей и инвесторов мы готовим
+      индивидуальный пакет материалов под запрос.
+    </div>
+  </div>
+
+  <aside class="contacts-card"
+         style="background: radial-gradient(circle at top left, rgba(250,204,21,0.14), transparent 55%), var(--bg-card);">
+    <div class="contacts-label">Код посёлка</div>
+    <div class="contacts-main" style="margin-bottom:6px;">
+      «Алхасты» — поселок с ясными правилами, сильным сообществом и уважением к природе
+    </div>
+    <div class="contacts-extra">
+      • запрещены открытые костры, сжигание мусора и рубка деревьев без согласования<br>
+      • ограничено содержание животных и регламентировано обращение с отходами<br>
+      • регламентированы заборы, шумные работы, размещение хозяйственных построек
+        и изменение ландшафта.
+    </div>
+  </aside>
+</div>
 
           <aside class="contacts-card" style="background: radial-gradient(circle at top left, rgba(250,204,21,0.14), transparent 55%), var(--bg-card);">
             <div class="contacts-label">Код посёлка</div>
