@@ -552,66 +552,74 @@
 
     /* ---------- Документы / правила ---------- */
 
-        .docs-grid {
-      display: grid;
-      grid-template-columns: 1.2fr 1fr;
-      gap: 16px;
-    }
+<div class="docs-grid">
+  <div>
+    <div class="docs-list">
+      <div class="doc-item">
+        <div>
+          <div class="doc-name">Устав ТСЖ «Алхасты»</div>
+          <div class="doc-tag">
+            структура управления, взносы, права и обязанности собственников
+          </div>
+        </div>
+        <a class="pill"
+           href="ustav-tszh-alhasty.pdf"
+           target="_blank"
+           rel="noopener">
+          Скачать PDF
+        </a>
+      </div>
 
-    .docs-list {
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-      font-size: 13px;
-    }
+      <div class="doc-item">
+        <div>
+          <div class="doc-name">Правила застройки и проживания</div>
+          <div class="doc-tag">
+            архитектурный стиль, заборы, парковка, шум, животные, экология
+          </div>
+        </div>
+        <a class="pill pill-green"
+           href="pravila-zastroiki-i-prozhivaniya-alhasty.pdf"
+           target="_blank"
+           rel="noopener">
+          Скачать PDF
+        </a>
+      </div>
 
-  <div class="doc-item">
-    <div>
-      <div class="doc-name">Правила застройки и проживания</div>
-      <div class="doc-tag">архитектурный стиль, заборы, парковка, шум, животные, экология</div>
+      <div class="doc-item">
+        <div>
+          <div class="doc-name">Инвест-портал проекта «Алхасты»</div>
+          <div class="doc-tag">
+            многопрофильная зона, финансовая модель, формат участия инвесторов
+          </div>
+        </div>
+        <a class="pill pill-gold" href="investors.html">
+          Перейти на инвест-портал
+        </a>
+      </div>
     </div>
-    <a class="pill pill-green" href="pravila-zastroiki-i-prozhivaniya-alhasty.pdf" target="_blank" rel="noopener">
-      Скачать PDF
-    </a>
+
+    <div class="docs-note">
+      Полные версии документов доступны для скачивания.  
+      Для заинтересованных покупателей и инвесторов мы готовим
+      индивидуальный пакет материалов под запрос.
+    </div>
   </div>
 
-  <div class="doc-item">
-    <div>
-      <div class="doc-name">Инвест-портал проекта «Алхасты»</div>
-      <div class="doc-tag">многопрофильная зона, финансовая модель, формат участия инвесторов</div>
+  <aside class="contacts-card"
+         style="background: radial-gradient(circle at top left, rgba(250,204,21,0.14), transparent 55%), var(--bg-card);">
+    <div class="contacts-label">Код посёлка</div>
+    <div class="contacts-main" style="margin-bottom:6px;">
+      «Алхасты» — поселок с ясными правилами, сильным сообществом и уважением к природе
     </div>
-    <a class="pill pill-gold" href="investors.html">
-      Перейти на инвест-портал
-    </a>
-  </div>
+    <div class="contacts-extra">
+      • запрещены открытые костры, сжигание мусора и рубка деревьев без согласования<br>
+      • ограничено содержание животных и регламентировано обращение с отходами<br>
+      • регламентированы заборы, шумные работы, размещение хозяйственных построек
+        и изменение ландшафта.
+    </div>
+  </aside>
 </div>
 
-<div class="docs-note">
-  Полные версии документов доступны для скачивания в открытом доступе.
-  При интересе к участку, дому или многопрофильной зоне мы дополнительно
-  отправим индивидуальный пакет материалов под ваш запрос.
-</div>
-
-
-    .doc-item {
-      padding: 8px 10px;
-      border-radius: 14px;
-      background: rgba(15,23,42,0.9);
-      border: 1px solid rgba(148,163,184,0.6);
-      display: flex;
-      justify-content: space-between;
-      gap: 8px;
-      align-items: center;
-    }
-
-    .doc-name {
-      font-weight: 500;
-    }
-
-    .doc-tag {
-      font-size: 11px;
-      color: #a5b4fc;
-    }
 
     .docs-note {
       font-size: 11px;
