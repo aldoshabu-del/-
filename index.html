@@ -5,17 +5,15 @@
   <title>Коттеджный посёлок «Алхасты» — официальный сайт</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description"
-        content="Коттеджный посёлок «Алхасты» на берегу реки Асса: современные одноэтажные дома, развитая инфраструктура, собственный парк и спортивный кластер." />
+        content="Коттеджный посёлок «Алхасты» на берегу реки Асса: современные одноэтажные дома, развитая инфраструктура, собственный парк и спортивный кластер.">
 
-  <!-- Шрифт (можно заменить при желании) -->
+  <!-- Шрифт -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     html, body {
       margin: 0;
@@ -28,7 +26,6 @@
 
     a { color: inherit; text-decoration: none; }
 
-    /* ---------- Глобальные цвета / фирменный стиль ---------- */
     :root {
       --bg-main: #020617;
       --bg-alt: #020818;
@@ -186,6 +183,43 @@
       cursor: pointer;
     }
 
+    /* ---------- Базовые секции ---------- */
+
+    section {
+      padding: 32px 16px;
+    }
+
+    .section-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .section-heading {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 10px;
+      margin-bottom: 18px;
+    }
+
+    .section-title {
+      font-size: 22px;
+      font-weight: 600;
+    }
+
+    .section-kicker {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--accent-gold);
+    }
+
+    .section-subtitle {
+      font-size: 13px;
+      color: var(--text-muted);
+      max-width: 520px;
+    }
+
     /* ---------- Hero ---------- */
 
     .hero {
@@ -258,9 +292,7 @@
       margin-bottom: 18px;
     }
 
-    .hero-meta strong {
-      color: #e5e7eb;
-    }
+    .hero-meta strong { color: #e5e7eb; }
 
     .hero-actions {
       display: flex;
@@ -277,8 +309,7 @@
     .hero-card {
       border-radius: var(--radius-xl);
       border: 1px solid rgba(148,163,184,0.3);
-      background:
-        linear-gradient(145deg, rgba(15,23,42,0.95), rgba(15,23,42,0.9));
+      background: linear-gradient(145deg, rgba(15,23,42,0.95), rgba(15,23,42,0.9));
       box-shadow: var(--shadow-soft);
       padding: 16px 18px;
       display: flex;
@@ -314,44 +345,7 @@
       font-size: 11px;
     }
 
-    /* ---------- Разделы ---------- */
-
-    section {
-      padding: 32px 16px;
-    }
-
-    .section-inner {
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .section-heading {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      gap: 10px;
-      margin-bottom: 18px;
-    }
-
-    .section-title {
-      font-size: 22px;
-      font-weight: 600;
-    }
-
-    .section-kicker {
-      font-size: 12px;
-      text-transform: uppercase;
-      letter-spacing: 0.14em;
-      color: var(--accent-gold);
-    }
-
-    .section-subtitle {
-      font-size: 13px;
-      color: var(--text-muted);
-      max-width: 520px;
-    }
-
-    /* ---------- Карточки преимуществ ---------- */
+    /* ---------- Сетки карточек ---------- */
 
     .grid-3 {
       display: grid;
@@ -379,9 +373,7 @@
       pointer-events: none;
     }
 
-    .card:hover::after {
-      opacity: 1;
-    }
+    .card:hover::after { opacity: 1; }
 
     .card-label {
       font-size: 11px;
@@ -430,7 +422,7 @@
       color: #fef9c3;
     }
 
-    /* ---------- Блок типов домов ---------- */
+    /* ---------- Дома ---------- */
 
     .homes-grid {
       display: grid;
@@ -470,7 +462,7 @@
       color: #bbf7d0;
     }
 
-    /* ---------- Блок инфраструктуры ---------- */
+    /* ---------- Инфраструктура ---------- */
 
     .inf-rows {
       display: grid;
@@ -552,79 +544,84 @@
 
     /* ---------- Документы / правила ---------- */
 
-<div class="docs-grid">
-  <div>
-    <div class="docs-list">
-      <div class="doc-item">
-        <div>
-          <div class="doc-name">Устав ТСЖ «Алхасты»</div>
-          <div class="doc-tag">
-            структура управления, взносы, права и обязанности собственников
-          </div>
-        </div>
-        <a class="pill"
-           href="ustav-tszh-alhasty.pdf"
-           target="_blank"
-           rel="noopener">
-          Скачать PDF
-        </a>
-      </div>
+    .docs-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 1fr;
+      gap: 16px;
+    }
 
-      <div class="doc-item">
-        <div>
-          <div class="doc-name">Правила застройки и проживания</div>
-          <div class="doc-tag">
-            архитектурный стиль, заборы, парковка, шум, животные, экология
-          </div>
-        </div>
-        <a class="pill pill-green"
-           href="pravila-zastroiki-i-prozhivaniya-alhasty.pdf"
-           target="_blank"
-           rel="noopener">
-          Скачать PDF
-        </a>
-      </div>
+    .docs-list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      font-size: 13px;
+    }
 
-      <div class="doc-item">
-        <div>
-          <div class="doc-name">Инвест-портал проекта «Алхасты»</div>
-          <div class="doc-tag">
-            многопрофильная зона, финансовая модель, формат участия инвесторов
-          </div>
-        </div>
-        <a class="pill pill-gold" href="investors.html">
-          Перейти на инвест-портал
-        </a>
-      </div>
-    </div>
+    .doc-item {
+      padding: 8px 10px;
+      border-radius: 14px;
+      background: rgba(15,23,42,0.9);
+      border: 1px solid rgba(148,163,184,0.6);
+      display: flex;
+      justify-content: space-between;
+      gap: 8px;
+      align-items: center;
+    }
 
-    <div class="docs-note">
-      Полные версии документов доступны для скачивания.  
-      Для заинтересованных покупателей и инвесторов мы готовим
-      индивидуальный пакет материалов под запрос.
-    </div>
-  </div>
+    .doc-name {
+      font-weight: 500;
+    }
 
-  <aside class="contacts-card"
-         style="background: radial-gradient(circle at top left, rgba(250,204,21,0.14), transparent 55%), var(--bg-card);">
-    <div class="contacts-label">Код посёлка</div>
-    <div class="contacts-main" style="margin-bottom:6px;">
-      «Алхасты» — поселок с ясными правилами, сильным сообществом и уважением к природе
-    </div>
-    <div class="contacts-extra">
-      • запрещены открытые костры, сжигание мусора и рубка деревьев без согласования<br>
-      • ограничено содержание животных и регламентировано обращение с отходами<br>
-      • регламентированы заборы, шумные работы, размещение хозяйственных построек
-        и изменение ландшафта.
-    </div>
-  </aside>
-</div>
-
+    .doc-tag {
+      font-size: 11px;
+      color: #a5b4fc;
+    }
 
     .docs-note {
       font-size: 11px;
       color: var(--text-muted);
       margin-top: 6px;
+    }
+
+    .docs-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin-top: 4px;
+    }
+
+    .docs-actions a.btn {
+      width: fit-content;
+    }
+
+    /* карточка "код посёлка" */
+    .code-card {
+      border-radius: 20px;
+      padding: 16px;
+      background: radial-gradient(circle at top left, rgba(250,204,21,0.14), transparent 55%), var(--bg-card);
+      border: 1px solid var(--border-soft);
+      box-shadow: var(--shadow-soft);
+      font-size: 13px;
+    }
+
+    .code-card-title {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--text-muted);
+      margin-bottom: 6px;
+    }
+
+    .code-card-main {
+      font-size: 14px;
+      font-weight: 500;
+      margin-bottom: 6px;
+    }
+
+    .code-card-list {
+      font-size: 12px;
+      color: var(--text-muted);
+      padding-left: 16px;
     }
 
     /* ---------- Контакты ---------- */
@@ -770,9 +767,7 @@
     }
 
     @media (max-width: 720px) {
-      .nav-links {
-        display: none;
-      }
+      .nav-links { display: none; }
       .nav-links.open {
         display: flex;
         flex-direction: column;
@@ -784,19 +779,13 @@
         background: rgba(15,23,42,0.98);
         border: 1px solid rgba(148,163,184,0.6);
       }
-      .nav-burger {
-        display: block;
-      }
-      .hero-inner {
-        padding-top: 22px;
-      }
+      .nav-burger { display: block; }
+      .hero-inner { padding-top: 22px; }
       .grid-3,
       .homes-grid {
         grid-template-columns: minmax(0, 1fr);
       }
-      .map-frame {
-        height: 420px;
-      }
+      .map-frame { height: 420px; }
     }
   </style>
 </head>
@@ -817,21 +806,19 @@
 
       <button class="nav-burger" id="navBurger" aria-label="Меню">☰</button>
 
-     <div class="nav-links" id="navLinks">
-  <a href="#about">О посёлке</a>
-  <a href="#homes">Дома</a>
-  <a href="#infra">Инфраструктура</a>
-  <a href="#map">Карта участков</a>
-  <a href="#docs">Правила</a>
-  <a href="investors.html">Инвесторам</a>
-  <a href="#contacts">Контакты</a>
-</div>
+      <div class="nav-links" id="navLinks">
+        <a href="#about">О посёлке</a>
+        <a href="#homes">Дома</a>
+        <a href="#infra">Инфраструктура</a>
+        <a href="#map">Карта участков</a>
+        <a href="#docs">Правила</a>
+        <a href="#contacts">Контакты</a>
+        <a href="investors.html">Для инвесторов</a>
+      </div>
 
       <div class="nav-cta">
         <button class="btn btn-outline" onclick="scrollToId('map')">Выбрать участок</button>
-        <button class="btn btn-primary" onclick="scrollToId('contacts')">
-          Оставить заявку
-        </button>
+        <button class="btn btn-primary" onclick="scrollToId('contacts')">Оставить заявку</button>
       </div>
     </nav>
   </header>
@@ -843,7 +830,7 @@
         <div>
           <div class="badge">
             <span class="badge-dot"></span>
-            Старт продаж — декабрь 2026 года
+            Старт продаж — март 2025
           </div>
 
           <h1 class="hero-title">
@@ -852,24 +839,24 @@
           </h1>
 
           <p class="hero-subtitle">
-            Современный поселок в окружении лесного массива: одноэтажные дома в едином стиле,
-            широкие улицы, центральный парк, детский сад, ФОК и многофункциональная общественно-деловая зона.
+            Современный посёлок в окружении леса: одноэтажные дома в едином стиле,
+            широкие улицы, центральный парк, детский сад, ФОК и общественно-деловая зона.
           </p>
 
           <div class="hero-meta">
             <div><strong>Площадь территории:</strong> 25 га</div>
             <div><strong>До аэропорта Магас:</strong> ~20 км</div>
-            <div><strong>Планируемые жители:</strong> до 800 чел.</div>
+            <div><strong>Планируемые жители:</strong> до 800 человек</div>
           </div>
 
-         <div class="hero-actions">
-  <button class="btn btn-primary" onclick="scrollToId('map')">
-    Выбрать участок на карте
-  </button>
-  <button class="btn btn-outline" onclick="location.href='investors.html'">
-    Информация для инвесторов
-  </button>
-</div>
+          <div class="hero-actions">
+            <button class="btn btn-primary" onclick="scrollToId('map')">
+              Выбрать участок на карте
+            </button>
+            <button class="btn btn-outline" onclick="scrollToId('homes')">
+              Посмотреть проекты домов
+            </button>
+          </div>
 
           <div class="hero-note">
             Территория получена инвестором по договору комплексного развития незастроенной территории.
@@ -878,20 +865,20 @@
         </div>
 
         <aside class="hero-card">
-          <div class="hero-card-title">Многопрофильная зона посёлка</div>
+          <div class="hero-card-title">Многопрофильная зона</div>
           <div class="hero-card-main">Жизнь, работа и отдых в одном месте</div>
 
           <div class="hero-card-grid">
             <div>
               <div class="card-label">Общественный центр</div>
               <div class="card-body">
-                Духовный центр, МФЗ, медицинский центр, открытый рынок, торговля и сервис, администрация поселка.
+                Духовный центр, общественно-деловой комплекс, медицинский центр, рынок, торговля и сервис, офисы, администрация посёлка.
               </div>
             </div>
             <div>
               <div class="card-label">Спорт и парк</div>
               <div class="card-body">
-                ФОК, три спортплощадки, центральный парк и набережная по берегу реки Асса.
+                ФОК, спортивные площадки, центральный парк и прогулочная набережная вдоль реки Асса.
               </div>
             </div>
           </div>
@@ -909,24 +896,23 @@
       <div class="section-inner">
         <div class="section-heading">
           <div>
-            <div class="section-kicker">О поселке</div>
+            <div class="section-kicker">О посёлке</div>
             <h2 class="section-title">Городской комфорт в загородной тишине</h2>
           </div>
           <p class="section-subtitle">
-            Посёлок расположен на юго-восточной окраине с.п. Алхасты, на пересечении
-            ул. Центральной и ул. Зязикова, в 200 метрах от реки Асса и в непосредственной
-            близости к лесному массиву. Дорога до участка — федеральная трасса.
+            Посёлок расположен на юго-восточной окраине с.п. Алхасты, в 200 метрах от реки Асса,
+            рядом с лесным массивом и федеральной трассой. Удобный подъезд, панорамы гор и близость
+            к туристическому кластеру региона.
           </p>
         </div>
 
         <div class="grid-3">
           <article class="card">
             <div class="card-label">Формат</div>
-            <div class="card-title">Коттеджный поселок нового поколения</div>
+            <div class="card-title">Коттеджный посёлок нового поколения</div>
             <div class="card-body">
-              До 100 индивидуальных домов в едином стиле, малоэтажные
-              многоквартирные дома до 5 этажей и отдельная общественно-деловая зона
-              для торговли, сервиса и туризма.
+              До 100 индивидуальных домов в едином стиле, малоэтажные многоквартирные дома
+              до 5 этажей и отдельная общественно-деловая зона для торговли, сервиса и туризма.
               <div class="pill-row">
                 <span class="pill pill-green">ИЖС и малоэтажная застройка</span>
                 <span class="pill">Предпринимательство и рекреация</span>
@@ -936,11 +922,11 @@
 
           <article class="card">
             <div class="card-label">Комфорт и инфраструктура</div>
-            <div class="card-title">Все важное — внутри поселка</div>
+            <div class="card-title">Всё важное — внутри посёлка</div>
             <div class="card-body">
-              Детский сад на 220 мест, ФОК, спортивные площадки, центральный парк,
-              набережная, рынок, медицинский центр, кафе и ресторан, офисы и коворкинг —
-              без необходимости выезжать в город.
+              Детский сад, ФОК, спортивные площадки, центральный парк, набережная, рынок,
+              медицинский центр, кафе и ресторан, офисы и коворкинг — без необходимости
+              выезжать в город.
               <div class="pill-row">
                 <span class="pill pill-gold">Социальные объекты с господдержкой</span>
                 <span class="pill">Пешеходная и велоинфраструктура</span>
@@ -952,9 +938,8 @@
             <div class="card-label">Правила и сообщество</div>
             <div class="card-title">Чёткие стандарты жизни</div>
             <div class="card-body">
-              Утверждены устав ТСЖ, правила застройки и проживания, регламент
-              пользования общими зонами — от единых требований к архитектуре
-              до экологичных практик и соседских отношений.
+              Работает товарищество собственников жилья «Алхасты», действует устав,
+              правила застройки и проживания, регламент использования общих зон.
               <div class="pill-row">
                 <span class="pill">ТСЖ «Алхасты»</span>
                 <span class="pill pill-green">Единый стиль застройки</span>
@@ -965,7 +950,7 @@
       </div>
     </section>
 
-    <!-- ТИПЫ ДОМОВ -->
+    <!-- ДОМА -->
     <section id="homes">
       <div class="section-inner">
         <div class="section-heading">
@@ -974,15 +959,14 @@
             <h2 class="section-title">Линейка проектов домов</h2>
           </div>
           <p class="section-subtitle">
-            Все проекты — кирпичные дома с утеплителем, разработанные специально под
-            «Алхасты»: единый стиль, энергоэффективные решения и адаптация под
-            участки от 4 до 12 соток.
+            Кирпичные энергоэффективные дома, разработанные специально под «Алхасты».
+            Единый стиль, продуманные планировки и возможность адаптации под участки от 4 до 12 соток.
           </p>
         </div>
 
         <div class="homes-grid">
           <div class="home-card">
-            <div class="home-name">Дом 75 м² — «Стародачный»</div>
+            <div class="home-name">75 м² — «Стародачный»</div>
             <div class="home-main">
               1 этаж, 2 спальни, чердак, кирпич с облицовкой деревом.
             </div>
@@ -991,28 +975,28 @@
               <span class="home-price">от 5,5 млн ₽</span>
             </div>
             <div class="card-body">
-              Идеален как первый дом за городом или компактный дом для пары.
+              Компактный дом для первой загородной недвижимости или проживания пары.
             </div>
           </div>
 
           <div class="home-card">
-            <div class="home-name">Дом 104 м² — «Семейный»</div>
+            <div class="home-name">104 м² — «Семейный»</div>
             <div class="home-main">
-              1 этаж, 3 спальни, 2 с/у, кирпич, классический английский стиль.
+              1 этаж, 3 спальни, 2 санузла, классический кирпичный дом.
             </div>
             <div class="home-meta-row">
               <span class="pill">Участок 6 соток</span>
               <span class="home-price">от 7,7 млн ₽</span>
             </div>
             <div class="card-body">
-              Оптимальное решение для семьи из 4 человек, просторная кухня-гостиная.
+              Оптимальное решение для семьи из 3–4 человек с большой кухней-гостиной.
             </div>
           </div>
 
           <div class="home-card">
-            <div class="home-name">Дом 116–136 м² — «Парк» и «Классика»</div>
+            <div class="home-name">116–136 м² — «Парк» и «Классика»</div>
             <div class="home-main">
-              1 этаж, 3 спальни, 2 с/у, стили шале и классика, облицовка камнем и деревом.
+              1 этаж, 3 спальни, 2 санузла. Стили шале и классика, облицовка камнем и деревом.
             </div>
             <div class="home-meta-row">
               <span class="pill">Участки 6–12 соток</span>
@@ -1024,9 +1008,9 @@
           </div>
 
           <div class="home-card">
-            <div class="home-name">Дома 180–315 м² — «Большая семья»</div>
+            <div class="home-name">180–315 м² — «Большая семья»</div>
             <div class="home-main">
-              3–5 спален, 2–4 с/у, одно- и двухэтажные дома в классическом и современном стиле.
+              3–5 спален, 2–4 санузла, одно- и двухэтажные варианты.
             </div>
             <div class="home-meta-row">
               <span class="pill">Участки 12 соток</span>
@@ -1067,7 +1051,7 @@
             <div class="inf-item">
               <div class="inf-dot"></div>
               <div>
-                <strong>Центральное здание МФЗ — 4 600 м²</strong><br>
+                <strong>Центральное здание МФЗ — ~4 600 м²</strong><br>
                 Офисы, сервисы для резидентов, коворкинг, конференц-зона, кафе и рестораны.
               </div>
             </div>
@@ -1076,24 +1060,23 @@
               <div class="inf-dot"></div>
               <div>
                 <strong>Спортивный комплекс и ФОК</strong><br>
-                Спортивно-оздоровительный центр, тренажёрные и игровые залы, три спортивные площадки,
-                маршруты для бега и прогулок.
+                Спортивно-оздоровительный центр, игровые и тренажёрные залы, открытые площадки.
               </div>
             </div>
 
             <div class="inf-item">
               <div class="inf-dot"></div>
               <div>
-                <strong>Медицинский центр — 1 500 м²</strong><br>
-                Базовый объём медицинских услуг для жителей и комплексной диагностики.
+                <strong>Медицинский центр — ~1 500 м²</strong><br>
+                Базовый объём медицинских услуг для жителей и туристов.
               </div>
             </div>
 
             <div class="inf-item">
               <div class="inf-dot"></div>
               <div>
-                <strong>Рынок, торговля и сервис, гостевой дом</strong><br>
-                Открытый рынок, магазины, кафе, сервисные компании и гостевой дом для туристов и инвесторов.
+                <strong>Рынок, торговля и сервис</strong><br>
+                Открытый рынок, магазины, кафе, сервисные компании, гостевой дом для инвесторов и туристов.
               </div>
             </div>
 
@@ -1101,7 +1084,7 @@
               <div class="inf-dot"></div>
               <div>
                 <strong>Парк и набережная</strong><br>
-                Центральный парк отдыха, благоустроенные прогулочные зоны и набережная вдоль реки Асса.
+                Центральный парк отдыха, прогулочные маршруты и набережная вдоль реки Асса.
               </div>
             </div>
           </div>
@@ -1112,22 +1095,22 @@
               Потенциал аренды и загрузки
             </div>
             <div class="card-body">
-              Суммарная площадь общественно-деловой зоны — порядка 18 200 м²
-              с прогнозной выручкой от аренды до 68 млн ₽ в год при полной загрузке.
+              Суммарная площадь общественно-деловой зоны — порядка 18 200 м²,
+              прогнозная выручка от аренды при полной загрузке — до 68 млн ₽ в год.
             </div>
 
             <div class="inf-stat-row">
               <div class="inf-stat">
                 <strong>Постоянные жители:</strong><br>
-                ~800 чел.
+                ~800 человек.
               </div>
               <div class="inf-stat">
                 <strong>Временные посетители:</strong><br>
-                до 3 200 чел. в год.
+                до 3 200 человек в год.
               </div>
               <div class="inf-stat">
                 <strong>Коммуникации:</strong><br>
-                электросети, дороги и соцобъекты с господдержкой.
+                дороги, электросети и соцобъекты с участием госпрограмм.
               </div>
             </div>
           </aside>
@@ -1145,15 +1128,14 @@
           </div>
           <p class="section-subtitle">
             Нажмите на участок на карте или в таблице: увидите статус, площадь, цену и ВРИ.
-            Для предварительного бронирования оставьте заявку прямо на карте.
+            Для предварительного бронирования оставьте заявку в форме справа от карты.
           </p>
         </div>
 
         <div class="map-frame-wrap">
-          <!-- Встраиваем существующую карту index-map.html -->
           <iframe
             src="index-map.html"
-            title="Карта участков коттеджного поселка «Алхасты»"
+            title="Карта участков коттеджного посёлка «Алхасты»"
             class="map-frame"
             id="mapFrame">
           </iframe>
@@ -1175,75 +1157,63 @@
             <h2 class="section-title">Правила застройки и проживания</h2>
           </div>
           <p class="section-subtitle">
-            В посёлке действует товарищество собственников жилья «Алхасты», устав и
-            регламенты которого закрепляют единый стиль застройки и комфортные
-            правила совместного проживания.
+            В посёлке действует ТСЖ «Алхасты», устав и регламенты которого закрепляют единый
+            стиль застройки, экологичное обращение с территорией и комфортное соседство.
           </p>
         </div>
 
         <div class="docs-grid">
-  <div>
-    <div class="docs-list">
-      <div class="doc-item">
-        <div>
-          <div class="doc-name">Устав ТСЖ «Алхасты»</div>
-          <div class="doc-tag">
-            структура управления, взносы, права и обязанности собственников
-          </div>
-        </div>
-        <a class="pill"
-           href="ustav-tszh-alhasty.pdf"
-           target="_blank"
-           rel="noopener">
-          Скачать PDF
-        </a>
-      </div>
+          <!-- Левая колонка: документы и инвест-портал -->
+          <div>
+            <div class="docs-list">
+              <div class="doc-item">
+                <div>
+                  <div class="doc-name">Устав ТСЖ «Алхасты»</div>
+                  <div class="doc-tag">структура управления, взносы, права и обязанности собственников</div>
+                </div>
+                <a href="docs/ustav-tszh-alhasty.pdf" class="btn btn-outline" target="_blank" rel="noopener">
+                  Скачать PDF
+                </a>
+              </div>
 
-      <div class="doc-item">
-        <div>
-          <div class="doc-name">Правила застройки и проживания</div>
-          <div class="doc-tag">
-            архитектурный стиль, заборы, парковка, шум, животные, экология
-          </div>
-        </div>
-        <a class="pill pill-green"
-           href="pravila-zastroiki-i-prozhivaniya-alhasty.pdf"
-           target="_blank"
-           rel="noopener">
-          Скачать PDF
-        </a>
-      </div>
+              <div class="doc-item">
+                <div>
+                  <div class="doc-name">Правила застройки и проживания</div>
+                  <div class="doc-tag">архитектурный стиль, заборы, парковка, шум, животные, экология</div>
+                </div>
+                <a href="docs/pravila-zastroiki-i-prozhivaniya-alhasty.pdf" class="btn btn-outline" target="_blank" rel="noopener">
+                  Скачать PDF
+                </a>
+              </div>
 
-      <div class="doc-item">
-        <div>
-          <div class="doc-name">Инвест-портал проекта «Алхасты»</div>
-          <div class="doc-tag">
-            многопрофильная зона, финансовая модель, формат участия инвесторов
-          </div>
-        </div>
-        <a class="pill pill-gold" href="investors.html">
-          Перейти на инвест-портал
-        </a>
-      </div>
-    </div>
-
-    <div class="docs-note">
-      Полные версии документов доступны для скачивания.  
-      Для заинтересованных покупателей и инвесторов мы готовим
-      индивидуальный пакет материалов под запрос.
-    </div>
-  </div>
-
-          <aside class="contacts-card" style="background: radial-gradient(circle at top left, rgba(250,204,21,0.14), transparent 55%), var(--bg-card);">
-            <div class="contacts-label">Код посёлка</div>
-            <div class="contacts-main" style="margin-bottom:6px;">
-              «Алхасты» — поселок с ясными правилами, сильным сообществом и уважением к природе
+              <div class="doc-item">
+                <div>
+                  <div class="doc-name">Инвест-портал проекта «Алхасты»</div>
+                  <div class="doc-tag">многопрофильная зона, финансовая модель, формат участия инвесторов</div>
+                </div>
+                <a href="investors.html" class="btn btn-primary">
+                  Перейти на инвест-портал
+                </a>
+              </div>
             </div>
-            <div class="contacts-extra">
-              • запрещены открытые костры, сжигание мусора и рубка деревьев без согласования<br>
-              • ограничено содержание животных и регламентировано обращение с отходами<br>
-              • регламентированы заборы, шумные работы, размещение хозяйственных построек и изменение ландшафта.
+
+            <div class="docs-note">
+              Полные версии документов доступны для скачивания. Для заинтересованных
+              покупателей и инвесторов мы готовим индивидуальный пакет материалов под запрос.
             </div>
+          </div>
+
+          <!-- Правая колонка: код посёлка -->
+          <aside class="code-card">
+            <div class="code-card-title">Код посёлка</div>
+            <div class="code-card-main">
+              «Алхасты» — посёлок с ясными правилами, сильным сообществом и уважением к природе
+            </div>
+            <ul class="code-card-list">
+              <li>запрещены открытые костры, сжигание мусора и рубка деревьев без согласования;</li>
+              <li>ограничено содержание животных и регламентировано обращение с отходами;</li>
+              <li>регламентированы заборы, шумные работы, размещение хозяйственных построек и изменение ландшафта.</li>
+            </ul>
           </aside>
         </div>
       </div>
@@ -1291,10 +1261,13 @@
             </div>
           </div>
 
+          <!-- Форма заявки через FormSubmit -->
           <form class="contacts-form"
-      id="leadForm"
-      action="https://formsubmit.co/s1410@mail.RU"
-      method="POST">
+                id="leadForm"
+                action="https://formsubmit.co/s1410@mail.RU"
+                method="POST">
+            <div class="contacts-label">Форма заявки</div>
+            <div style="height:6px;"></div>
 
             <div class="form-group">
               <label for="leadName">Имя *</label>
@@ -1308,22 +1281,28 @@
 
             <div class="form-group">
               <label for="leadTopic">Что вас интересует? *</label>
-              <input id="leadTopic" name="topic" placeholder="Например: участок 6–8 соток, дом 104 м², инвестирование…" required />
+              <input id="leadTopic" name="topic"
+                     placeholder="Например: участок 6–8 соток, дом 104 м², инвестирование…"
+                     required />
             </div>
 
             <div class="form-group">
               <label for="leadComment">Комментарий</label>
-              <textarea id="leadComment" name="comment" placeholder="Удобное время для звонка, дополнительные вопросы…"></textarea>
+              <textarea id="leadComment" name="comment"
+                        placeholder="Удобное время для звонка, дополнительные вопросы…"></textarea>
             </div>
+
+            <!-- Скрытые поля FormSubmit -->
             <input type="hidden" name="_subject" value="Новая заявка на участок с сайта Алхасты">
             <input type="hidden" name="_template" value="table">
             <input type="hidden" name="_next" value="https://aldoshabu-del.github.io/-/#contacts">
+
             <button type="submit" class="btn btn-primary" style="width:100%; margin-top:6px;">
               Отправить заявку
             </button>
 
             <div class="form-note">
-              Заявка принята в работу сотрудиником
+              Заявка автоматически поступит ответственному сотруднику.
             </div>
           </form>
         </div>
@@ -1369,6 +1348,7 @@
   // Бургер-меню
   const navBurger = document.getElementById("navBurger");
   const navLinks = document.getElementById("navLinks");
+
   navBurger.addEventListener("click", () => {
     navLinks.classList.toggle("open");
   });
@@ -1379,7 +1359,6 @@
       navLinks.classList.remove("open");
     });
   });
-
 </script>
 
 </body>
